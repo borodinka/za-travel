@@ -33,7 +33,7 @@ export const authSlice = createSlice({
     },
     logout: (state) => {
       state.user = null;
-      state.status = "idle";
+      state.status = "succeeded";
       state.error = null;
     },
     setUserName: (state, action: PayloadAction<string | null | undefined>) => {
