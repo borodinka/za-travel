@@ -35,6 +35,7 @@ export default function AccountSidebar({ isMinimized, onClose }: Props) {
   const { md } = useBreakpoints();
   const user = useAppSelector(selectUser);
   const userInitial = user?.displayName?.[0];
+  const userName = user?.displayName?.split(" ")[0];
 
   const onLinkClick = () => {
     if (!md) {
@@ -69,7 +70,7 @@ export default function AccountSidebar({ isMinimized, onClose }: Props) {
           <Avatar sx={{ height: 48, width: 48, background: Colors.disabled }}>
             {userInitial}
           </Avatar>
-          {!isMinimized && <Typography variant="body1">Andrew</Typography>}
+          {!isMinimized && <Typography variant="body1">{userName}</Typography>}
         </Stack>
         <List>
           {ACCOUNT_LINKS.map(({ Icon, text, path }) => (
