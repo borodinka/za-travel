@@ -1,1 +1,1 @@
-export const APP_NAME = "ZaTravel";
+export const APP_NAME = "GoTravel";
