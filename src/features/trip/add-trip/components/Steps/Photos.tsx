@@ -40,6 +40,7 @@ function usePhotosForm() {
 
     dispatch(setPhotos(data));
     const result = await addTrip({ ...trip, photos: data });
+
     if (!("error" in result)) {
       navigate(AppRoutes.trips);
       dispatch(resetWizard());
