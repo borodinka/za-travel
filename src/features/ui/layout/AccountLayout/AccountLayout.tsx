@@ -84,9 +84,7 @@ export default function AccountLayout() {
       sx={{
         display: "flex",
         bgcolor: "grey.100",
-        minHeight: { md: "100vh" },
-        height: { xs: "100vh", md: "auto" },
-        maxHeight: { xs: "-webkit-fill-available", md: "auto" },
+        minHeight: "100vh",
       }}
     >
       {/* Desktop Drawer */}
